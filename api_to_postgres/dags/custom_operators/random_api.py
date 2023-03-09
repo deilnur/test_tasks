@@ -8,7 +8,8 @@ import datetime
 class RandomApiToPostgres(BaseOperator):
     """
     Args:
-        BaseOperator (_type_): _description_
+        conn_id: connction string for Postgres ,
+        rows_count: count of rows to get from api and insert to Postgres, default = 100
     """
     
     def __init__(self, conn_id, rows_count = 100, **kwargs) -> None:
